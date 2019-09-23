@@ -8,6 +8,7 @@ router.post("/", (req, res) => {
   if (!req.body.coordinates) {
     return res.status(422).json({ error: "Missing coordinates" });
   }
+  console.log(req.body.coordinates)
 
   const osrm = req.app.get("osrm");
   const options = {

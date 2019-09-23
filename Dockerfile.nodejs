@@ -15,6 +15,4 @@ COPY app/ /usr/src/app
 
 EXPOSE 5000
 
-CMD ["osrm-datastore", "/data/planet-latest.osrm"]
-
 CMD ["yarn", "start"]
