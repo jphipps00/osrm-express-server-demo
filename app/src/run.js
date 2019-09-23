@@ -4,7 +4,7 @@ const fs = require('fs');
 console.log(fs.readdirSync('/data/'));
 
 const server = app.createServer({ osrmDataPath: process.env.OSRM_GRAPH,
-                                  sharedMemory: false,
+                                  sharedMemory: true,
                                   algorithm: "CH" });
 
 server.listen(5000, () => {
