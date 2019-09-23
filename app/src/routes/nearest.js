@@ -11,7 +11,8 @@ router.post("/", (req, res) => {
 
   const osrm = req.app.get("osrm");
   const options = {
-    coordinates: req.body.coordinates,
+    // coordinates: req.body.coordinates,
+    coordinates: [[ '-81.54729', '28.28113' ]],
     number: req.body.number || 1
   };
   console.log(options);
