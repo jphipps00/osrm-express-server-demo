@@ -12,7 +12,8 @@ router.post("/", (req, res) => {
   const options = {
     coordinates: req.body.coordinates,
     sources: req.body.sources,
-    destinations: req.body.destinations
+    destinations: req.body.destinations,
+    annotations: req.body.annotations || 'distance,duration'
   };
 
   if (!req.body.sources || !req.body.destinations) {
