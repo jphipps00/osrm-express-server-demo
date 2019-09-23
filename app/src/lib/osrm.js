@@ -9,8 +9,6 @@ function loadGraph(options) {
                  algorithm: options.algorithm,
                  use_shared_memory: options.sharedMemory };
   console.log(opts);
-  code = execSync('osrm-datastore '+options.osrmDataPath); 
-  console.log(code.toString());  
   return new OSRM(opts);
 }
 
