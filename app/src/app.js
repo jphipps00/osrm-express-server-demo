@@ -7,7 +7,7 @@ const logfmt = require("logfmt");
 const health = require("./routes/health");
 const route = require("./routes/route");
 const table = require("./routes/table");
-const nearest = require("./routes/nearest");
+// const nearest = require("./routes/nearest");
 
 const osrmBindings = require("./lib/osrm");
 
@@ -22,7 +22,7 @@ function configureRoutes(app) {
   app.use("/health", health);
   app.use("/route", route);
   app.use("/table", table);
-  app.use("/nearest", nearest);
+  // app.use("/nearest", nearest);
 }
 
 function configureOSRM(app, options) {

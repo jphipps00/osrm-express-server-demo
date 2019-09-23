@@ -1,7 +1,9 @@
 const logfmt = require("logfmt");
 const app = require("./app");
 
-const server = app.createServer({ osrmDataPath: process.env.OSRM_GRAPH });
+const server = app.createServer({ osrmDataPath: process.env.OSRM_GRAPH,
+                                  sharedMemory: false,
+                                  algorithm: "CH" });
 
 server.listen(5000, () => {
   logfmt.log({ "start": "running server",
