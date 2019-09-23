@@ -4,6 +4,7 @@ const logfmt = require("logfmt");
 const router = express.Router();
 
 router.post("/", (req, res) => {
+  console.log(req.body);
   if (!req.body.coordinates) {
     return res.status(422).json({ error: "Missing coordinates" });
   }
