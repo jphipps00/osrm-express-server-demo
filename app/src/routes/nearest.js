@@ -13,6 +13,7 @@ router.post("/", (req, res) => {
     coordinates: req.body.coordinates,
     number: req.body.number || 1
   };
+  console.log(options);
 
   try {
     osrm.route(options, (err, result) => {
