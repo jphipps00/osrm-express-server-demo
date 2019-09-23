@@ -18,7 +18,7 @@ router.post("/", (req, res) => {
   console.log(options);
 
   try {
-    osrm.route(options, (err, result) => {
+    osrm.nearest(options, (err, result) => {
       if (err) {
         return res.status(422).json({ error: err.message });
       }
