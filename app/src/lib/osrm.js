@@ -8,6 +8,7 @@ function loadGraph(options) {
   const opts = { path: options.osrmDataPath, 
                  algorithm: options.algorithm,
                  use_shared_memory: options.sharedMemory };
+  console.log(opts);
   return new OSRM(opts);
 }
 

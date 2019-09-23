@@ -26,6 +26,7 @@ function configureRoutes(app) {
 }
 
 function configureOSRM(app, options) {
+  console.log(options);
   const osrm = osrmBindings.loadGraph(options);
   app.set("osrm", osrm);
 }
