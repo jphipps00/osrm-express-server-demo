@@ -6,7 +6,7 @@ const OSRM = require("osrm");
 
 function loadGraph(options) {
   const opts = { path: options.osrmDataPath, algorithm: "CH" };
-  return new OSRM(opts);
+  return OSRM(opts);
 }
 
 module.exports = {
